@@ -6,7 +6,7 @@ type Props = {
 }
 export const UserImageComponent = ({ user, className = '' }: Props) => {
   const url =
-    user.profilePicOverride.length > 0
+    (user.profilePicOverride ?? '').length > 0
       ? user.profilePicOverride
       : user.currentAvatarThumbnailImageUrl
 
